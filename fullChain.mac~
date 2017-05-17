@@ -1,0 +1,35 @@
+/control/verbose 2
+/run/verbose 1
+#
+/rdecay01/fullChain true
+#/gps/ang/type iso
+#/gps/pos/centre 0 0 5.046 cm
+#/gps/particle gamma
+#/gps/ene/mono 121.7818 keV
+/grdm/applyARM true
+/grdm/applyICM true
+/process/em/fluo true
+/process/em/auger true
+/process/em/pixe true
+#
+/analysis/setFileName run2
+/analysis/h1/set 1  100  0. 4000 keV	#e+ e-
+/analysis/h1/set 2  100  0. 4000 keV	#neutrino
+/analysis/h1/set 3  8192  0. 2.048 MeV	#gamma
+/analysis/h1/set 4  100  0. 10   MeV	#alpha
+/analysis/h1/set 5  100  0. 200  keV	#recoil ion
+/analysis/h1/set 6  100  0  8    MeV	#EkinTot (Q)
+/analysis/h1/set 7  100  0. 300  MeV	#P balance
+/analysis/h1/set 8  100  0. 1.e+11 y	#time of life
+/analysis/h1/set 9  8192  0. 2.048 MeV	#absoEdep
+/analysis/h1/set 10  8192  0. 2.048 MeV	#absoEdep2
+#
+#/rdecay01/event/printModulo 10000
+#  
+/run/beamOn 20000000
+
+#limit the chain
+#
+###/grdm/nucleusLimits 234 238 90 92
+#
+###/run/beamOn 1
